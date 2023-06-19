@@ -1,0 +1,14 @@
+/* personal presentation */
+.personal-presentation{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.personal-presentation img {
+    width: 50em;
+    height: 50em;
+}

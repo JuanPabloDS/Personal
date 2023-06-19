@@ -1,0 +1,21 @@
+/* personal presentation */
+.personal-start{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5em;
+}
+.personal-presentation{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'russo', sans-serif;
+    font-style: italic;
+}
+.personal-presentation img {
+    width: 50em;
+    height: 50em;
+}
