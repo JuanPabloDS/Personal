@@ -1,21 +1,19 @@
 :root {
     --cor-title: #00ff03; /* Vermelho */
-    --cor-paragraph: #edeff2;
+    --cor-paragraph: #ffffff;
     --cor--box: #293328;
     --cor--about: #151515;
-    --cor--menu: #090909;
-    --cor--back-text: #edeff2;
   }
 /* Menu */
 nav {
     display: flex;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: var(--cor--menu);
+    background: #011e24;
+    height: 73px;
     position: fixed;
     width: 100%;
     z-index: 100;
-    opacity: 1;
 }
 main {
     background: url("bg.jpg") no-repeat center center;
@@ -31,7 +29,7 @@ main {
     top: 0;
     width: 100%;
     height: 100%;
-    background: var(--cor--about);
+    background: #011e24;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -89,16 +87,10 @@ to {
     transform: translateX(0);
 }
 }
-.icon img {
-    width: 6em;
-    height: 6em;
-}
-.menu-icon {
-    position: fixed;
-    z-index:100;
-    top:0;
-    margin-top: 30px;
-    left: 80%;
+
+.icon img{
+    width: 50px;
+    height: 50px;
 }
 @media screen and (max-width: 800px) {
     .mobile-menu div {
@@ -124,15 +116,6 @@ to {
         }
     }
 /* personal presentation */
-.personal-img{
-    width: 100%;
-    height: 750px;
-    background-image: url('/../static/img/trainer.jpg');
-    background-size: cover; /* Define o tamanho da imagem de fundo */
-  /* Outras propriedades opcionais */
-  background-position: center; /* Define a posição da imagem de fundo */
-  background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
-}
 .personal-start{
     width: 100%;
     height: 100%;
@@ -148,7 +131,6 @@ to {
     height: 100%;
     font-family: 'russo', sans-serif;
     font-style: italic;
-    padding-bottom: 100px;
 }
 .personal-presentation h1 {
     margin-bottom: 0;
@@ -168,7 +150,7 @@ to {
     width: 100%;
     height: 100%;
     margin-bottom: 5em;
-    background-color: var(--cor--back-text);
+    background-color: var(--cor--about);
 }
 .card {
     overflow: visible;
@@ -235,11 +217,10 @@ to {
     font-family: 'russo', sans-serif;
 }
 .personal-about h1 {
-    margin-top: 2em;
+    margin-bottom: 0;
     color: var(--cor-title);
     font-style: italic;
     margin-bottom: 1em;
-    background-color: ;
 }
 .about-text{
     display: flex;

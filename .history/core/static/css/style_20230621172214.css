@@ -126,7 +126,7 @@ to {
 /* personal presentation */
 .personal-img{
     width: 100%;
-    height: 750px;
+    height: 700px;
     background-image: url('/../static/img/trainer.jpg');
     background-size: cover; /* Define o tamanho da imagem de fundo */
   /* Outras propriedades opcionais */

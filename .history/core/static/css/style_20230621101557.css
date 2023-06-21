@@ -1,0 +1,34 @@
+/* personal presentation */
+:root {
+    --cor-title: #00ff03; /* Vermelho */
+    --cor-paragraph: #ffffff;
+  }
+.personal-start{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5em;
+}
+.personal-presentation{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'russo', sans-serif;
+    font-style: italic;
+}
+.personal-presentation h1 {
+    margin-bottom: 0;
+    color: var(--cor-title);
+}
+.personal-presentation img {
+    width: 30em;
+    height: 30em;
+}
+.personal-presentation a {
+    font-size: 1em;
+    text-decoration: none;
+    color: var(--cor-title);
+}

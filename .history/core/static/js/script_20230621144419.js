@@ -65,16 +65,3 @@ class MobileNavbar {
     body.classList.remove("hidden")
     mobileNavbar.animateLinks()
   }
-
-
-// Menu fixed
-var elemento1 = document.getElementById('nav');
-
-// Obtém as dimensões do elemento 1
-var largura = elemento1.offsetWidth;
-var altura = elemento1.offsetHeight;
-
-// Aplica as dimensões ao elemento 2
-var elemento2 = document.getElementById('fixed');
-elemento2.style.width = largura + 'px';
-elemento2.style.height = altura + 'px';

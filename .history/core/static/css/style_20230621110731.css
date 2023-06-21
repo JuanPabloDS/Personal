@@ -1,0 +1,133 @@
+/* personal presentation */
+:root {
+    --cor-title: #00ff03; /* Vermelho */
+    --cor-paragraph: #ffffff;
+  }
+.personal-start{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5em;
+}
+.personal-presentation{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'russo', sans-serif;
+    font-style: italic;
+}
+.personal-presentation h1 {
+    margin-bottom: 0;
+    color: var(--cor-title);
+}
+.personal-presentation img {
+    width: 30em;
+    height: 30em;
+}
+.personal-presentation a {
+    font-size: 1em;
+    text-decoration: none;
+    color: var(--cor-title);
+}
+/* personal about */
+.about{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5em;
+}
+.personal-about{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'russo', sans-serif;
+}
+.personal-about h1 {
+    margin-bottom: 0;
+    color: var(--cor-title);
+    font-style: italic;
+    margin-bottom: 1em;
+}
+.about-text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.about-text span {
+    color: var(--cor-title);
+    font-family: 'russo', sans-serif;
+}
+.about-text li {
+    color: var(--cor-title);
+}
+.about-text i {
+    padding-left: 0.3em;
+    padding-right: 0.1em;
+}
+.about-text p {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--cor-paragraph);
+}
+.card {
+    overflow: visible;
+    width: 537px;
+    height: 542px;
+    margin-bottom: 84px;
+    transition: transform 0.2s;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    border: none;
+    background-color: transparent;
+    color: #e2e9ff;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+.card:hover{
+    transform: scale(1.04);
+}
+.contents {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+    border-radius: 5px;
+}
+.front, .back {
+    background-color: #151515;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+.back {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.back-content {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    background-color: #0e0d0d;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+}
