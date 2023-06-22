@@ -208,8 +208,7 @@ to {
 .about-card {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-
+    justify-content: space-around;
 }
 .about-elementor-div {
     text-align: center;

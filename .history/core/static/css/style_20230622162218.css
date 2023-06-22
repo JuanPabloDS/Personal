@@ -208,8 +208,6 @@ to {
 .about-card {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-
 }
 .about-elementor-div {
     text-align: center;
@@ -225,7 +223,7 @@ to {
 }
 .card {
     overflow: visible;
-    width: 46%;
+    width: 30%;
     height: 100%;
     margin-bottom: 84px;
     transition: transform 0.2s;

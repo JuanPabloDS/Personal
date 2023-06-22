@@ -7,8 +7,7 @@
     --cor--about: #0d0d0d;
     --cor--menu: #0d0d0d;
     --cor--back-text: #edeff2;
-    --cor--about-background: #012a04;
-    --cor--about-h1: #edeff2;
+    --cor--about-background: #012801;
     --cor--details-background: #0d0d0d;
     --cor--details-titulo: #fe6219;
     --cor--details-p: #edeff2;
@@ -186,46 +185,12 @@ to {
     height: 100%;
 }
 .background-about{
-    background-color: var(--cor--about-background);
+    background-color: var(--cor-about-background);
     padding-bottom: 3em;
-}
-.personal-about{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    font-family: 'russo', sans-serif;
-}
-.personal-about h1 {
-    margin-top: 2em;
-    color: var(--cor--about-h1);
-    font-style: italic;
-    margin-bottom: 0.5em;
-}
-.about-card {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-
-}
-.about-elementor-div {
-    text-align: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-.about-elementor-div span{
-    border-top: 4px solid #fb6018;
-    width: 117px;
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 3em;
 }
 .card {
     overflow: visible;
-    width: 46%;
+    width: 100%;
     height: 100%;
     margin-bottom: 84px;
     transition: transform 0.2s;
@@ -275,6 +240,35 @@ to {
     justify-content: center;
     gap: 30px;
     padding: 15px;
+}
+.personal-about{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'russo', sans-serif;
+}
+.personal-about h1 {
+    margin-top: 2em;
+    color: var(--cor-title-second);
+    font-style: italic;
+    margin-bottom: 1em;
+}
+.about-elementor {
+
+}
+.about-elementor-div {
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.about-elementor-div span{
+    border-top: 4 solid #fb6018;
+    width: 48px;
+    margin: 0 auto;
 }
 .about-text{
     display: flex;

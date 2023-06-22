@@ -208,8 +208,7 @@ to {
 .about-card {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-
+    gap
 }
 .about-elementor-div {
     text-align: center;
@@ -234,7 +233,6 @@ to {
     background-color: transparent;
     color: #e2e9ff;
     transition: transform 0.2s;
-    flex-shrink: 0;
 }
 .card:hover{
     transform: scale(1.04);

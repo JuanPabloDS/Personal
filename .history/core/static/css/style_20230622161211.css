@@ -205,12 +205,7 @@ to {
     font-style: italic;
     margin-bottom: 0.5em;
 }
-.about-card {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
 
-}
 .about-elementor-div {
     text-align: center;
     padding-top: 8px;
@@ -225,7 +220,7 @@ to {
 }
 .card {
     overflow: visible;
-    width: 46%;
+    width: 40%;
     height: 100%;
     margin-bottom: 84px;
     transition: transform 0.2s;
