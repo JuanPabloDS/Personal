@@ -1,0 +1,527 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="Bootstrap, Landing page, Template, Registration, Landing">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="author" content="Grayrids">
+
+        <title>Personal</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontawesome/css/all.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontawesome/css/fontawesome.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontawesome/css/fontawesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontawesome/css/brands.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontawesome/css/solid.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        <style>
+                html, body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                color: white;
+                background: #151515;
+                font-family:'Oswald', sans-serif;
+                }
+                @font-face {
+                    font-family: 'russo';
+                        src: url("{% static 'css/RussoOne-Regular.ttf' %}")};
+        </style>
+
+        <!-- CSS -->
+    </head>
+    <body>
+        <header>
+            <header>
+                <nav id="nav">
+                  <div class="container icon">
+                    <img src="{% static 'img/erick.png' %}" alt="">
+                  </div>
+                  <ul class="nav-list">
+                    <div class="mobile-menu-ex">
+                    </div>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="#sobre" onclick="closeMenu()">Sobre</a></li>
+                    <li><a href="#tecnologias" onclick="closeMenu()">Tecnologias</a></li>
+                    <li><a href="{% static 'img/curriculo/curriculo.pdf' %}" download="" onclick="closeMenu()">Curriculo</a></li>
+                    <li><a href="#projetos" onclick="closeMenu()">Projetos</a></li>
+                    <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
+                  </ul>
+                </nav>
+              </header>
+            </div>
+            <div class="menu-icon">
+                <div class="mobile-menu">
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+                  <div class="line3"></div>
+                </div>
+              </div>
+              <div id="fixed"></div>
+            <!-- Personal presentation -->
+            <div class="personal-img">
+                <div class="personal-start  wow fadeInUp">
+                    <div class="container personal-presentation wow fadeInUp">
+                        <h1>CONSULTA INDIVIDUAL</h1>
+                        <a href="https://instagram.com/erick_lopes99?igshid=YmMyMTA2M2Y=">@erick_lopes99</a>
+                        <p>Leia ATENTAMENTE todas as informações abaixo para fazer parte do time.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- About -->
+            <div class="about">
+                <div class="background-about">
+                    <div class="container personal-about wow fadeInUp">
+                        <h1>O QUE ESTÁ INCLUSO:</h1>
+                        <div class="about-elementor">
+                            <div class="about-elementor-div">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="container about-card">
+                            <div class="wow fadeInUp card">
+                                <div class="">
+                                    <div class="contents">
+                                        <div class="back">
+                                            <div class="back-content">
+                                                <div class="about-text">
+                                                    <li>
+                                                        <p><span> Anamnese<i class="fa-solid fa-angle-right"></i></span>
+                                                        Pesquisa completa para entender qual é o seu objetivo, rotina diária, 
+                                                        restrições, desejos e particularidades. Com todas essas respostas em mãos será montado um treino
+                                                        100% individualizado para atender suas demandas e necessidades.
+                                                        </p>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow fadeInUp card">
+                                <div class="">
+                                    <div class="contents">
+                                        <div class="back">
+                                            <div class="back-content">
+                                                <div class="about-text">
+                                                    <li>
+                                                        <p><span> Aplicativo e acesso aos Treinos Diários<i class="fa-solid fa-angle-right"></i></span>
+                                                            Esqueça toda aquela ficha/PDF de treinos chatos 
+                                                            e monónotonos que os personais da sua região entregam como serviço. Aqui, na minha consultoria, você 
+                                                            terá acesso aos seus treinos através de um aplicativo exclusivo e totalmente didático, onde você poderá 
+                                                            ver seus treinos, vídeos explicativos, observações importantes de cada exercício, além de poder anotar
+                                                            todas as suas cargas de treinos para termos noção das progressões diariamente.
+                                                        </p>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow fadeInUp card">
+                                <div class="">
+                                    <div class="contents">
+                                        <div class="back">
+                                            <div class="back-content">
+                                                <div class="about-text">
+                                                    <li>
+                                                        <p><span> Exercícios demonstrados em vídeos<i class="fa-solid fa-angle-right"></i></span>
+                                                            Saber a execução correta dos exercícios é de extrema 
+                                                            importância dentro do nosso processo e te fará chegar mais rápido ao seu objetivo, além de prevenir 
+                                                            dores, lesões e possíveis acidentes durante o treinamento. Portanto, você receberá vídeos demonstrativos 
+                                                            de cada exercício para treinar com segurança e eficiência.
+                                                        </p>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow fadeInUp card">
+                                <div class="">
+                                    <div class="contents">
+                                        <div class="back">
+                                            <div class="back-content">
+                                                <div class="about-text">
+                                                    <li>
+                                                        <p><span> Correções<i class="fa-solid fa-angle-right"></i></span>
+                                                            Para eu ter certeza de que está fazendo tudo certo, 
+                                                            você irá me enviar todas as execuções de movimentos de 20 em 20 dias pelo Whatsapp, para que eu 
+                                                            possa observar seus movimentos e entrar com possíveis correções.
+                                                        </p>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow fadeInUp card">
+                                <div class="">
+                                    <div class="contents">
+                                        <div class="back">
+                                            <div class="back-content">
+                                                <div class="about-text">
+                                                    <li>
+                                                        <p><span> Suporte 24 horas no Whatsapp<i class="fa-solid fa-angle-right"></i></span>
+                                                            Sempre que precisar, pode me enviar uma mensagem que 
+                                                            irei te ajudar assim que possível.
+                                                        </p>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow fadeInUp card">
+                                <div class="">
+                                    <div class="contents">
+                                        <div class="back">
+                                            <div class="back-content">
+                                                <div class="about-text">
+                                                    <li>
+                                                        <p><span> Brindes Exclusivos<i class="fa-solid fa-angle-right"></i></span>
+                                                            Ao fechar qualquer plano de consultoria comigo, voce irá receber 
+                                                            um E-Book de alongamento gratuitamente, para executar a qualquer hora do seu dia, e uma ficha de 
+                                                            presença via bloco de notas para você anotar as suas presenças.
+                                                        </p>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="details wow fadeInUp">
+                <div class="details-padding" style="background-color: var(--cor--details-background); width: 100%; height: 100%;">
+                    <div class="container details-inicial wow fadeInUp">
+                        <h1>ANTES DA CONSULTA</h1>
+                        <div class="details-elementor">
+                            <div class="details-elementor-div">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class=" details-text" style="flex-direction: row;">
+                            <div class="details-item wow fadeInUp">
+                                <div class="details-img">
+                                    <img class="wow fadeInUp" src="{% static '/img/flecha.png' %}" alt="">
+                                </div>
+                            </div>
+                            <div class="details-item">
+                                <p class="wow fadeInUp"> 
+                                    &nbsp&nbsp&nbsp&nbsp Você responderá a anamnese de forma bem completa e direta, 
+                                    além de enviá-las com as fotos da avaliação postural para meu e-mail ou Whatsapp.  
+                                </p>
+                                <p class="wow fadeInUp""> 
+                                    &nbsp&nbsp&nbsp&nbsp Esses dados irão me preparar para a sua consulta e elaboração do seu programa de 
+                                    treinamento, me tornando mais assertivo e dinâmico na prescrição do seu treino, 
+                                    quanto mais rápido você me enviar tudo que solicitei para elaboração do seu programa
+                                    de treinamento, mais rápido terá o seu treino em mão.  
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="details wow fadeInUp">
+                <div class="details-padding" style="background-color: #012a03; width: 100%; height: 100%;">
+                <div class="container details-inicial wow fadeInUp">
+                    <h1>DURANTE A CONSULTA</h1>
+                    <div class="details-elementor">
+                        <div class="details-elementor-div">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class=" details-text" style="flex-direction: row-reverse">
+                        <div class="details-item  wow fadeInUp">
+                            <div class="details-img">
+                                <img class="wow fadeInUp" src="{% static '/img/cerebro.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="details-item  wow fadeInUp">
+                            <p class="wow fadeInUp"> 
+                                &nbsp&nbsp&nbsp&nbspDurante a nossa consulta eu irei te conhecer melhor. Como você já respondeu a anamnese e me mandou 
+                            as fotos para avaliação postural, é hora de desabafar, me contar toda a sua experiência dentro da 
+                            academia ou com possíveis personais, contar  seus reais anseios e destrinchar as suas dificuldades 
+                            e desejos. 
+                            </p>
+                            <p class="wow fadeInUp"> 
+                                &nbsp&nbsp&nbsp&nbsp É nesse papo onde eu vou te explicar o que iremos fazer, como você pode usar estratégias para se 
+                            benéficiar mais do meu acompanhamento, entender a minha metodologia de treino e qual o caminho certo 
+                            para atingir seus resultados. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="details wow fadeInUp">
+                <div class="details-padding" style="background-color: black; width: 100%; height: 100%;">
+                    <div class="container details-inicial wow fadeInUp">
+                        <h1>APÓS A CONSULTA:</h1>
+                        <div class="details-elementor">
+                            <div class="details-elementor-div">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class=" details-text wow fadeInUp">
+                            <div class="details-item">
+                                <div class="details-img">
+                                    <img class="wow fadeInUp" src="{% static '/img/after.png' %}" alt="">
+                                </div>
+                            </div>
+                            <div class="details-item">
+                                <p class="wow fadeInUp"> 
+                                    &nbsp&nbsp&nbsp&nbspAo término da consulta eu irei sentar e observar todas as suas possíveis alterações, 
+                                prescrever todo o seu planejamento de treino, passar para o aplicativo e te ensinar de 
+                                forma prática como utilizar a sua nova plataforma de treino. 
+                                </p>
+                                <p class="wow fadeInUp""> 
+                                    &nbsp&nbsp&nbsp&nbsp Logo na primeira semana de treinamento você deverá gravar a execução de cada exercício 
+                                prescrito para eu avaliar como está sendo a execução do seu movimento e, com o tempo, 
+                                iremos ajustando tudo. Após 20 dias, você deverá me enviar novamente uma nova filmagem 
+                                com as execuções dos mesmo exercícios para eu lhe ajudar com possíveis erros na técnica 
+                                do movimento e ter certeza de que tudo está indo no caminho certo. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="price wow fadeInUp">
+                <div class="container wow fadeInUp">
+                    <div class="price-plan wow fadeInUp">
+                        <h1>PLANOS DISPONÍVEIS</h1>
+                        <div class="price-elementor">
+                            <div class="price-elementor-div">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="price-grid">
+                            <div class="price-div">
+                                <div>
+                                    <p class="">
+                                        PLANO MENSAL <i class="fa-solid fa-angle-right"></i>Protocolo de 6 semanas de treinamento
+                                    </p>
+                                <img src="{% static 'img/trofeu.png' %}" alt="">
+                                    <p id="">
+                                        R$ 199,99
+                                    </p>
+                                </div>
+                                <div class="wow fadeInUp">
+                                    <div class="table wow fadeInUp">
+                                        <p>
+                                            <span>Nesse plano você vai ter direito a um protocolo de 6 semanas</span>
+                                            que irá totalizar 44 dias de treinamento. Dentro do plano teremos
+                                            correções de vídeos a cada 15 dias onde você deve me enviar 10 vídeos
+                                                por vez.
+                                        </p>
+                                    </div>
+                                    <div class="table wow fadeInUp">
+                                        <p>
+                                            <span>Nesse plano teremos 2 encontro via WhatsApp para a correção dos movimentos.</span> 
+                                            O não comprimento do envio dos vídeos dentro do prazo solicitado o aluno
+                                            perderá a revisão das execuções dos movimentos e não terá uma nova revisão.
+                                        </p>
+                                    </div>
+                                    <div class="table wow fadeInUp">
+                                        <p> 
+                                            <span>O suporte no WhatsApp ficará disponível durante todo o seu período de
+                                                treinamento até o fim do seu plano</span>  junto com o seu acesso ao aplicativo de treino. (44 dias)
+                                        </p>
+                                    </div>
+                                    <div class="table wow fadeInUp">
+                                        <p> 
+                                            O plano começa a valer a partir do dia que finalizarmos todos os procedimentos e o 
+                                            pagamento for confirmado.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-div">
+                                <div>
+                                    <p> 
+                                        PLANO TRIMESTRAL -> 90 dias de treinamento 
+                                    </p>
+                                    <img class="" src="{% static 'img/trofeu.png' %}" alt="">
+                                    <p id="gold"> 
+                                    R$ 499,99
+                                    </p>
+                                </div>
+                                <div class="wow fadeInUp">
+                                    <div class="table wow fadeInUp">
+                                    <p> 
+                                        <span>No plano trimestral você tem direito a 3 protocolos de treino</span>  que serão a cada 
+                                        30 dias totalizando 90 dias de treinamento. Dentro do plano teremos correções de 
+                                        vídeos a cada 15 dias onde você deve me enviar 10 vídeos por vez.
+                                    </p>
+                                    </div>
+                                    <div class="table wow fadeInUp">
+                                    <p> 
+                                        <span>Nesse plano teremos 2 encontros via WhatsApp a cada 30 dias que irá 
+                                            totalizar 6 encontros</span>  até o fim do seu plano. O não comprimento do envio 
+                                        dos vídeos dentro do prazo solicitado o aluno perderá a revisão das 
+                                        execuções dos movimentos e não terá uma nova revisão.
+                                    </p>
+                                    </div>
+                                    <div class="table wow fadeInUp">
+                                    <p> 
+                                        <span>O suporte no WhatsApp ficará disponível durante todo o seu período de treinamento</span>  
+                                        até o fim do seu plano junto com o seu acesso ao aplicativo de treino. (90 dias)
+                                    </p>
+                                    </div>
+                                    <div class="table wow fadeInUp">
+                                    <p> 
+                                        O plano começa a valer a partir do dia que finalizarmos todos os procedimentos 
+                                        e o pagamento for confirmado.
+                                    </p>
+                                    </div>
+                                </div>
+                                <div class="pg wow fadeInUp">
+                                    <p >Pagamento com cartão de crédito pelo mercado pago em até 6x sem juros ou á vista pelo pix.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin "></div>
+            </div>
+            <div class="student-indi wow fadeInUp">
+                <div class="container student-text wow fadeInUp">
+                    <div class="student-inside-text wow fadeInUp">
+                        <img class="consult-img wow fadeInUp" src="{% static 'img/alunas.png' %}" alt="">
+                    </div>
+                    <div class="vtable wow fadeInUp">
+                        <img src="{% static 'img/aluna2.jpeg' %}" alt="">
+                        <img src="{% static 'img/aluna1.jpeg' %}" alt="">
+                        <img id="whatimg" src="{% static 'img/aluna3.jpeg' %}" alt="">
+                        <img src="{% static 'img/aluna5.jpeg' %}" alt="">
+                        <img id="whatimge"src="{% static 'img/aluna4.jpeg' %}" alt="">
+                        <img style="height: 115vw" src="{% static 'img/aluna6.jpeg' %}" alt="">
+                    </div>
+                </div>
+                <div class="margin"></div>
+            </div>
+
+            <div class="question-indi wow fadeInUp">
+                <div class="container question-text wow fadeInUp">
+                    <div class="question-inside-text wow fadeInUp">
+                        <img class="consult-img wow fadeInUp" src="{% static 'img/duvidas.png' %}" alt="">
+                    </div>
+                    <br>
+                    <div class="div-duv wow fadeInUp">
+                        <div class="duvi duvborder duv-color" id="duvi-a">
+                            <span>O treino será trocado quando?</span>
+                            <i class="fa-solid fa-caret-down wow fadeInUp " id="i-a"></i>
+                        </div>
+                        <div class="duvib duvborder he" id="duvi-b">
+                            <p class="">Depende, se você contratou o plano de 6 semanas de treino
+                                 e o seu processo de evolução for rápido fazemos alterações necessárias,
+                                  caso contrario, só na renovação. Agora se você contratou o plano de 3 
+                                  meses, essa troca ela acontece a cada 30 dias!</p>
+                        </div>
+                    </div>
+                    <div class="div-duv wow fadeInUp">
+                        <div class="duvi duvborder wow fadeInUp" id="duvi-c">
+                            <span>Posso te mandar mensagem no Whatsapp?</span>
+                            <i class="fa-solid fa-caret-down" id="i-c"></i>
+                        </div>
+                        <div class="duvib duvborder he" id="duvi-d">
+                            <p class="">Sim, você deve! Preciso que você tire todas as duvidas pra eu ter 
+                                certeza que você está indo pelo caminho certo, quando enviar mensagem assim 
+                                que possível, responderei.</p>
+                        </div>
+                    </div>
+                    <div class="div-duv wow fadeInUp">
+                        <div class="duvi duvborder wow fadeInUp" id="duvi-e">
+                            <span>
+                                O que acontece se eu não enviar os vídeos dentro do prazo determinado?  </span>
+                            <i class="fa-solid fa-caret-down" id="i-e"></i>
+                        </div>
+                        <div class="duvib duvborder he " id="duvi-f">
+                            <p class="">Infelizmente se você perder o prazo para a gravação dos vídeos, 
+                                não terá uma segunda chance! Portanto, a gravação dos exercícios é de 
+                                extrema importância porque ela pode afetar diretamente no seu resultado! 
+                                Você só vai conseguir uma nova chance apenas em caso de renovação do plano 
+                                ou no próximo protocolo! </p>
+                        </div>
+                    </div>
+                    <div class="div-duv wow fadeInUp">
+                        <div class="duvi duvborder wow fadeInUp" id="duvi-g">
+                            <span>
+                                O treino ficara disponível no app até quando? </span>
+                            <i class="fa-solid fa-caret-down" id="i-g"></i>
+                        </div>
+                        <div class="duvib duvborder he " id="duvi-h">
+                            <p class="">Até o vencimento do seu plano!</p>
+                        </div>
+                    </div>
+                    <div class="div-duv wow fadeInUp">
+                        <div class="duvi duvborder wow fadeInUp" id="duvi-i">
+                            <span>
+                                Preciso enviar as fotos antes da consulta?</span>
+                            <i class="fa-solid fa-caret-down " id="i-i"></i>
+                        </div>
+                        <div class="duvib duvborder he" id="duvi-j">
+                            <p class="">Com toda certeza, é a única forma de eu prescrever um treino 
+                                individualizado para você, avaliando seu grau de flexibilidade, o seu 
+                                corpo como um todo, seus desequilíbrios musculares e desvios posturais. 
+                                A consulta não será feita sem as fotos e nem sem a anamnese.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="margin"></div>
+
+            <div class="mar-indi wow fadeInUp">
+                <div class="container individual wow fadeInUp">
+                    <img class="consult-img" src="{% static 'img/marcar.png' %}" alt="">
+                    <p class="atention container">Toque no link abaixo e receba meu contato para começarmos sua transformação.</p>
+                    <div class="container online wow fadeInUp">
+                        <a href="https://api.whatsapp.com/send?phone=5561993534637&text=Ol%C3%A1,%20Erick!%20Tenho%20interesse%20em%20saber%20mais%20sobre%20a%20sua%20consultoria%20on-line." target="_blank" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+                            <span class="elementor-button-content-wrapper">
+                                <span class="elementor-button-icon elementor-align-icon-left">
+                                <i aria-hidden="true" class="fab fa-whatsapp"></i></span>
+                            <span class="elementor-button-text">QUERO FAZER PARTE DO TIME</span>
+                        </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="margin"></div>
+            </div>
+            <div class="top">
+            </div>
+            <div class="bottom"></div>
+        </div>
+        <div class="margin"></div>
+        </header>
+
+        <script src="{% static 'js/script.js' %}"></script>
+        <script src="{% static 'js/jquery-min.js' %}"></script>
+        <script src="{% static 'js/jquery.mask.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/classie.js' %}"></script>
+        <script src="{% static 'js/jquery.mixitup.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.js' %}"></script>
+        <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+        <script src="{% static 'js/wow.js' %}"></script>
+        <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
