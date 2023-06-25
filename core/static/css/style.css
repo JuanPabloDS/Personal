@@ -36,6 +36,34 @@
 
 
   }
+
+  /*! Container */
+  @media (min-width: 576px){
+    .container, .container-sm {
+      max-width: 540px;
+    }}
+    @media (min-width: 768px){
+      .container, .container-md, .container-sm {
+        max-width: 720px;
+      }}
+    @media (min-width: 992px){
+      .container, .container-lg, .container-md, .container-sm {
+        max-width: 960px;
+      }}
+    @media (min-width: 1200px){
+      .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1140px;
+      }}
+    @media (min-width: 1400px){
+      .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1320px;
+      }}
+
+.hidden {
+    overflow: hidden;
+}
+        
+
 /* Menu */
 nav {
     display: flex;
@@ -579,12 +607,12 @@ to {
     padding: 2em;
     transition: all 0.3s ease;
 }
-.hidden {
+.hidden-box {
     display: none;
     opacity: 0;
     transform: translateY(-20px); /* Inicialmente, a div está posicionada acima */
   }
-  .visible {
+  .visible-box {
     display: block;
     opacity: 1;
     transform: translateY(0); /* Div desce até sua posição original */
@@ -595,3 +623,4 @@ to {
     color: var(--cor--question-p);
     font-family: 'Open Sans', sans-serif;
 }
+

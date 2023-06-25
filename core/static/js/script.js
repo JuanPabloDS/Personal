@@ -84,10 +84,29 @@ elemento2.style.height = altura + 'px';
 
 function captElement(elemento) {
 
-
+  const visibles = document.querySelectorAll('.visible-box');
   var elemento2 = elemento.nextElementSibling;
+  
+  // Percorre cada div
+  visibles.forEach(div => {
+    console.log(elemento2)
+    console.log('----------')
+    console.log(div)
+    console.log('////////////')
+
+
+    if (div ==! elemento2) {
+      div.classList.remove('visible-box');
+      div.classList.add('hidden-box');
+    }
+  
+  });
 
   // Modificar a propriedade CSS
-  elemento2.classList.toggle("hidden");
-  elemento2.classList.toggle("visible");
+  elemento2.classList.toggle("hidden-box");
+  elemento2.classList.toggle("visible-box");
+
 }
+
+// Fechar o menu ao clicar fora dele
+
