@@ -1,44 +1,38 @@
 :root {
     --cor-title: #1ac41c;
-    --cor-title-second: #303031;
+    --cor-title-second: #040404;
+    --cor-background: #040404;
     --cor-paragraph: #edeff2;
     --cor-span:#fe6219;
-    --cor--box: #0d0d0d;
-    --cor--about: #0d0d0d;
-    --cor--menu: #0d0d0d;
+    --cor--box: #040404;
+    --cor--about: #040404;
+    --cor--menu: #0c0c0c;
     --cor--back-text: #edeff2;
     --cor--about-background: #012a04;
     --cor--about-h1: #edeff2;
-    --cor--details-background: #0d0d0d;
+    --cor--details-background: #040404;
     --cor--details-titulo: #edeff2;
     --cor--details-p: #edeff2;
     --cor--price-background:#edeff2;
     --cor--price-h1: #000000;
     --cor--price-p: #edeff2;
     --cor--price-money: #edeff2;
-    --cor--price-box: #0d0d0d;
+    --cor--price-box: #040404;
     --cor--price-value: #ffbb00;
     --cor--price-span: #1cb126;
-    --cor--price-pg: #303031;
-    --cor--imagem-background: #0d0d0d;
+    --cor--price-pg: #040404;
+    --cor--imagem-background: #040404;
     --cor--imagem-h1: #edeff2;
     --cor--question-background: #edeff2;
     --cor--question-h1: #000000;
     --cor--question-p: #000000;
     --cor--question-box: #1a1a1a;
     --cor--question-span: #edeff2;
-    --cor--contact-background: #0d0d0d;
+    --cor--contact-background: #040404;
     --cor--contact-h1: #edeff2;
     --cor--contact-p: #edeff2;
     --cor--contact-box: #012a04;
     --cor--contact-span: #edeff2;
-
-
-
-
-
-
-
 
   }
 
@@ -66,6 +60,9 @@
 
 .hidden {
     overflow: hidden;
+}
+body{
+    background-color: var(--cor-background);
 }
 
 /* Menu */
@@ -141,6 +138,10 @@ main {
     display: block;
     cursor: pointer;
 }
+.nav-list a {
+    font-size: 15px;
+    color: var(--cor-title);
+}
 @keyframes navLinkFade {
 from {
     opacity: 0;
@@ -159,7 +160,7 @@ to {
     position: fixed;
     z-index:100;
     top:0;
-    margin-top: 30px;
+    margin-top: 22px;
     left: 80%;
 }
 @media screen and (max-width: 800px) {
@@ -179,7 +180,7 @@ to {
         transform: rotate(45deg) translate(-8px, -6px);
     }
     .nav-list a {
-        font-size: 10px;
+        font-size: 15px;
     }
     .nav-list a:hover {
         color: #F00;
@@ -192,7 +193,7 @@ to {
 /* personal presentation */
 .personal-img{
     width: 100%;
-    height: 750px;
+    height: 931px;
     background-image: url('/../static/img/trainer.jpg');
     background-size: cover; /* Define o tamanho da imagem de fundo */
   /* Outras propriedades opcionais */
@@ -229,13 +230,19 @@ to {
     text-decoration: none;
     color: var(--cor-title);
 }
+@media screen and (min-width: 1600px) {
+    .personal-img{
+        height: 1125px;
+}
+}
 @media screen and (max-width: 800px) {
     .personal-img{
-        background-size: cover;
+        background-size: 993px 647px;
+        height: 647px;
         background-position: right;
     }
     .personal-presentation h1 {
-        font-size: 2.0rem;
+        font-size: 1.7em;
     }
     .personal-presentation a {
         font-size: 0.9rem;
@@ -258,17 +265,33 @@ to {
 }
 @media screen and (max-width: 500px) {
     .personal-img{
-        background-size: 677px 470px;
-        height: 470px;
+        background-size: 840px 606px;
+        height: 607px;
         background-position: right;
+    }
+    .personal-presentation {
+        padding: 27px;
     }
 }
 @media screen and (max-width: 400px) {
     .personal-img{
 
-        background-size: 133% 471px;
+        background-size: 172% 470px;
         background-position: right;
+        height: 470px;
     }
+    .personal-presentation h1 {
+        font-size: 1.5rem;
+      }
+    .personal-presentation {
+        padding: 27px;
+        padding-top: 118px;
+    }
+    .personal-presentation p {
+        font-size: 0.7rem;
+        padding-top: 1em;
+        text-align: center;
+      }
 }
 /* personal about */
 .about{
@@ -308,7 +331,7 @@ to {
     padding-bottom: 8px;
 }
 .about-elementor-div span{
-    border-top: 4px solid #fb6018;
+    border-top: 4px solid var(--cor-span);
     width: 117px;
     margin: 0 auto;
     display: block;
@@ -395,6 +418,40 @@ to {
     color: var(--cor-paragraph);
     font-size: 1.1em;
 }
+@media screen and (max-width: 800px) {
+    .personal-about h1 {
+        font-size: 1.7em;
+
+    }
+    .about-card {
+        grid-template-columns: 1fr;
+        grid-gap: none;
+        align-items: center;
+      }
+    .card {
+        width: 100%;
+        height: 100%;
+    }
+    .about-text p {
+        font-size: 0.9em;
+    }
+    .about-text span {
+        font-size: 1em;
+      }
+}
+@media screen and (max-width: 400px){
+    .personal-about h1 {
+        font-size: 1.5rem;
+    }
+    .about-text p {
+        font-size: 0.9em;
+        text-align: left;
+        
+    }
+    .about-text span {
+        font-size: 0.9em;
+      }
+}
 /* personal details */
 .details{
     display: flex;
@@ -425,7 +482,7 @@ to {
     padding-bottom: 8px;
 }
 .details-elementor-div span{
-    border-top: 4px solid #fb6018;
+    border-top: 4px solid var(--cor-span);
     width: 117px;
     margin: 0 auto;
     display: block;
@@ -440,6 +497,8 @@ to {
 }
 .details-padding{
     padding-bottom: 6em;
+    width: 100%;
+    height: 100%;
 }
 .details-item {
     flex: 1;
@@ -461,6 +520,69 @@ to {
     font-family: 'Open Sans', sans-serif;
     text-align: justify;
     font-size: 1.3em;
+}
+@media screen and (min-width: 1700px) {
+    .details-padding{
+        min-height: 879px;;
+    }
+    .details-text{
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .details-inicial h1 {
+        font-size: 1.7em;
+      }
+      #column{
+        flex-direction: column !important;
+      }
+      .details-text p {
+        
+        text-align: center;
+        font-size: 1.1em;
+    }
+    .details-text img {
+        width: 13em;
+        height: 14em;
+        margin-bottom: 3em;
+    }
+    .details-padding {
+        padding-bottom: 5em;
+      }
+}
+@media screen and (max-width: 500px){
+    #column{
+        padding: 20px;
+      }
+    .details-text p {
+        
+        text-align: center;
+        font-size: 1em;
+    }
+    .details-text img {
+        width: 11em;
+        height: 13em;
+        margin-bottom: 3em;
+    }
+    .details-padding {
+        padding-bottom: 4em;
+      }
+}
+@media screen and (max-width: 400px){
+    .details-inicial h1 {
+        font-size: 1.5em;
+      }
+    .details-text p {
+        
+        text-align: center;
+        font-size: 0.98em;
+    }
+    .details-text img {
+        width: 9em;
+        height: 10em;
+        margin-bottom: 3em;
+    }
 }
 /* prices */
 .price{
@@ -495,8 +617,7 @@ to {
     padding-bottom: 8px;
 }
 .price-elementor-div span{
-    border-top: 4px solid #fb6018;
-    width: 117px;
+    border-top: 4px solid var(--cor-span);
     margin: 0 auto;
     display: block;
     margin-bottom: 3em;
@@ -559,6 +680,76 @@ to {
 
     color: var(--cor--price-pg);
 }
+.price-margin{
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .price-plan h1 {
+        font-size: 1.7em;
+      }
+    .price-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: none;
+        justify-content: center;
+        align-items: center;
+      }
+      .price-div {
+
+        width: 100%;
+        height: 100%;
+
+        padding-bottom: 20px;
+      }
+    .price-margin{
+        height: 30px;
+        width: 100%;
+        display: block;
+    }
+    .price-pg {
+        width: 96%;
+      }
+    .price-plan p {
+        font-size: 1.0em;
+      }
+}
+@media screen and (max-width: 500px){
+    .price-plan p {
+        font-size: 0.9em;
+      }
+    .price-div img {
+        height: 7em;
+        width: 7em;
+      }
+      .price-grid {
+
+        padding: 20px;
+      }
+      .price-pg {
+        width: 67%;
+      }
+      .price {
+        padding-bottom: 4em;
+      }
+}
+@media screen and (max-width: 400px){
+    .price-plan h1 {
+        font-size: 1.5em;
+      }
+      .price {
+        padding-bottom: 2em;
+      }
+      .price-div img {
+        margin-bottom: 3em;
+      }
+      .price-div img {
+        height: 6em;
+        width: 6em;
+      }
+      .price-pg {
+        padding-top: 2em;
+      }
+}
 /* Imagens */
 .imagem{
     display: flex;
@@ -597,6 +788,37 @@ to {
     width: 40em;
     margin: auto;
     margin-bottom: 2em;
+}
+@media screen and (max-width: 800px) {
+    .imagem-plan h1 {
+        font-size: 1.7em;
+      }
+      .imagem-pic img {
+        width: 24em;
+        margin: auto;
+          margin-bottom: auto;
+        margin-bottom: 2em;
+      }
+}
+@media screen and (max-width: 500px){
+    .imagem-pic img {
+        width: 20em;
+        margin: auto;
+          margin-bottom: auto;
+        margin-bottom: 2em;
+      }
+}
+@media screen and (max-width: 400px){
+    .imagem-plan h1 {
+        font-size: 1.5em;
+      }
+      .imagem-pic img {
+        width: 18em;
+        margin: auto;
+          margin-bottom: auto;
+        margin-bottom: 2em;
+      }
+      
 }
 /* Questions */
 .question{
@@ -639,8 +861,12 @@ to {
     height: 100%;
 }
 .question-duv{
+    display: flex;
+    flex-wrap: wrap;
     width: 40em;
     height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 .question-box{
     width: 40em;
@@ -648,6 +874,7 @@ to {
     background-color: var(--cor--question-box);
     padding: 1em;
     margin-bottom: 0.5em;
+    cursor: pointer;
 }
 .question-box span{
     color: var(--cor--question-span);
@@ -674,6 +901,50 @@ to {
     text-align:justify;
     color: var(--cor--question-p);
     font-family: 'Open Sans', sans-serif;
+}
+@media screen and (max-width: 800px) {
+    .question-plan h1 {
+        font-size: 1.7em;
+      }
+      .question-duv {
+        display: flex;
+        flex-wrap: wrap;
+        width: 34em;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      .question-box span {
+        font-size:   0.9em;
+      }
+      .question-aws p {
+        font-size: 0.91em;
+      }
+      
+}
+@media screen and (max-width: 650px){
+    .question-duv {
+        width: 27em;
+      }
+      .question-box span {
+        font-size:   0.8em;
+      }
+      .question-aws p {
+        font-size: 0.81em;
+      }
+}
+@media screen and (max-width: 500px){
+    .question-duv {
+        width: 22em;
+      }
+}
+@media screen and (max-width: 400px){
+    .question-duv {
+        width: 19em;
+      }
+    .question-plan h1 {
+        font-size: 1.5em;
+      }    
 }
 /* Contact */
 .contact{
@@ -772,16 +1043,64 @@ to {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 15px;
+    padding: 9px;
     padding-top: 25px;
     text-decoration: none;
-
+    padding-left: 16px;
+    padding-right: 16px;
 }
 .contact-back-content i{
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-right: 0.6em;
     margin-top: 0.2em;
 }
 .contact-back-content p{
-    font-size: 1.5em;
+    font-size: 1.2em;
+}
+@media screen and (max-width: 800px) {
+    .contact-div h1 {
+        font-size: 1.7em;
+      }
+    .contact-p p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .contact-back-content {
+        width: 100%;
+        height: 100%;
+        background-color: var(--cor--contact-box);
+        border-radius: 5px;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 13px;
+        padding-top: 18px;
+        padding-bottom: 2px;
+        text-decoration: none;
+      }
+      .contact-back-content p {
+        font-size: 0.9em;
+      }
+      .contact-back-content i {
+        margin-top: 0;
+      }
+      
+}
+@media screen and (max-width: 650px){
+
+}
+@media screen and (max-width: 500px){
+
+}
+@media screen and (max-width: 400px){
+    .contact-div h1 {
+        font-size: 1.5em;
+      }
+      .contact-back-content p {
+        font-size: 0.8em;
+      }
+      .contact {
+        padding-bottom: 2em;
+      }
 }
