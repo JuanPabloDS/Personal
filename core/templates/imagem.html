@@ -3,7 +3,7 @@
 <div class="imagem wow fadeInUp">
     <div class="imagem-plan container wow fadeInUp">
         <div class=" wow fadeInUp">
-            <h1>O QUE AS ALUNAS DIZEM:</h1>
+            <h1>{{imagem.titulo}}</h1>
             <div class="price-elementor">
                 <div class="price-elementor-div">
                     <span></span>
@@ -11,13 +11,9 @@
             </div>
         </div>
         <div class="imagem-pic wow fadeInUp">
-            <img src="{% static 'img/aluna2.jpeg' %}" alt="">
-            <img src="{% static 'img/aluna1.jpeg' %}" alt="">
-            <img id="whatimg" src="{% static 'img/aluna3.jpeg' %}" alt="">
-            <img src="{% static 'img/aluna5.jpeg' %}" alt="">
-            <img id="whatimge"src="{% static 'img/aluna4.jpeg' %}" alt="">
-            <img style="height: 115vw" src="{% static 'img/aluna6.jpeg' %}" alt="">
+            {% for img in imagem_lista  %}
+            <img src="media/{{img.img}}" alt="">
+            {% endfor %}
         </div>
     </div>
-    <div class="margin"></div>
 </div>

@@ -3,7 +3,7 @@
 <div class="price wow fadeInUp">
     <div class="container wow fadeInUp">
         <div class="price-plan wow fadeInUp">
-            <h1>PLANOS DISPONÍVEIS</h1>
+            <h1>{{precos.titulo}}</h1>
             <div class="price-elementor">
                 <div class="price-elementor-div">
                     <span></span>
@@ -13,42 +13,23 @@
                 <div class="price-div">
                     <div>
                         <p class="">
-                            PLANO MENSAL <i class="fa-solid fa-angle-right"></i> 6 semanas de treinamento
+                            {{precos_plano1.titulo}} <i class="fa-solid fa-angle-right"></i> {{precos_plano1.dias}}
                         </p>
                         <p id="price-value">
-                            R$ 199,99
+                            R$ {{precos_plano1.preco}}
                         </p>
                     <img src="{% static 'img/trofeu.png' %}" alt="">
                         
                     </div>
                     <div class="wow fadeInUp price-p">
+                        {% for preco in precos_plano1_dados %}
                         <div class="table wow fadeInUp">
                             <p>
-                                <span>Nesse plano você vai ter direito a um protocolo de 6 semanas</span>
-                                que irá totalizar 44 dias de treinamento. Dentro do plano teremos
-                                correções de vídeos a cada 15 dias onde você deve me enviar 10 vídeos
-                                    por vez.
+                                <span>{{preco.destaque}}</span>
+                                {{preco.texto}}
                             </p>
                         </div>
-                        <div class="table wow fadeInUp">
-                            <p>
-                                <span>Nesse plano teremos 2 encontro via WhatsApp para a correção dos movimentos.</span> 
-                                O não comprimento do envio dos vídeos dentro do prazo solicitado o aluno
-                                perderá a revisão das execuções dos movimentos e não terá uma nova revisão.
-                            </p>
-                        </div>
-                        <div class="table wow fadeInUp">
-                            <p> 
-                                <span>O suporte no WhatsApp ficará disponível durante todo o seu período de
-                                    treinamento até o fim do seu plano</span>  junto com o seu acesso ao aplicativo de treino. (44 dias)
-                            </p>
-                        </div>
-                        <div class="table wow fadeInUp">
-                            <p> 
-                                O plano começa a valer a partir do dia que finalizarmos todos os procedimentos e o 
-                                pagamento for confirmado.
-                            </p>
-                        </div>
+                        {% endfor %}
                     </div>
                     
                 </div>
@@ -56,46 +37,28 @@
                 <div class="price-div">
                     <div>
                         <p class="">
-                            PLANO TRIMESTRAL <i class="fa-solid fa-angle-right"></i> 90 dias de treinamento
+                            {{precos_plano2.dias}} <i class="fa-solid fa-angle-right"></i> {{precos_plano2.dias}}
                         </p>
                         <p id="price-value">
-                            R$ 499,99
+                            R$ {{precos_plano2.preco}}
                         </p>
                     <img src="{% static 'img/trofeu.png' %}" alt="">
                         
                     </div>
                     <div class="wow fadeInUp price-p">
+                        {% for preco in precos_plano2_dados %}
                         <div class="price-table wow fadeInUp">
                             <p>
-                                <span>No plano trimestral você tem direito a 3 protocolos de treino</span>  que serão a cada 
-                                30 dias totalizando 90 dias de treinamento. Dentro do plano teremos correções de 
-                                vídeos a cada 15 dias onde você deve me enviar 10 vídeos por vez.
+                                <span>{{preco.destaque}}</span>
+                                {{preco.texto}}
                             </p>
                         </div>
-                        <div class="table wow fadeInUp">
-                            <p>
-                                <span>Nesse plano teremos 2 encontro via WhatsApp para a correção dos movimentos.</span> 
-                                O não comprimento do envio dos vídeos dentro do prazo solicitado o aluno
-                                perderá a revisão das execuções dos movimentos e não terá uma nova revisão.
-                            </p>
-                        </div>
-                        <div class="table wow fadeInUp">
-                            <p> 
-                                <span>O suporte no WhatsApp ficará disponível durante todo o seu período de treinamento</span>  
-                                até o fim do seu plano junto com o seu acesso ao aplicativo de treino. (90 dias)
-                            </p>
-                        </div>
-                        <div class="table wow fadeInUp">
-                            <p> 
-                                O plano começa a valer a partir do dia que finalizarmos todos os procedimentos 
-                            e o pagamento for confirmado.
-                            </p>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
             <div class="price-pg wow fadeInUp">
-                <p >Pagamento com cartão de crédito pelo mercado pago em até 6x sem juros ou á vista pelo pix.</p>
+                <p >{{precos.aviso}}</p>
             </div>
         </div>
     </div>

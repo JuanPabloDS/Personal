@@ -1,98 +1,38 @@
 {% load static %}
 <!-- Details-->
-<div class="details wow fadeInUp">
-    <div class="details-padding" style="background-color: var(--cor--details-background); width: 100%; height: 100%;">
+{% for detalhe in detalhes %}
+<div class="details">
+    <div class="details-padding" id="color_back_{{detalhe.id}}" style='width: 100%; height: 100%;'>
         <div class="container details-inicial wow fadeInUp">
-            <h1>ANTES DA CONSULTA</h1>
+            <h1 id="color_title_{{detalhe.id}}">{{detalhe.titulo}} </h1>
             <div class="details-elementor">
                 <div class="details-elementor-div">
                     <span></span>
                 </div>
             </div>
+            {% if detalhe.id|divisibleby:2 == 0 %}
             <div class=" details-text" style="flex-direction: row; " id="column">
+            {% else %}
+            <div class=" details-text" style="flex-direction: row-reverse; " id="column">
+            {% endif %}
                 <div class="details-item wow fadeInUp">
                     <div class="details-img">
-                        <img class="wow fadeInUp" src="{% static '/img/flecha.png' %}" alt="">
+                        <img class="wow fadeInUp" src="media/{{detalhe.img}}" alt="">
                     </div>
                 </div>
                 <div class="details-item">
-                    <p class="wow fadeInUp"> 
-                        &nbsp&nbsp&nbsp&nbsp Você responderá a anamnese de forma bem completa e direta, 
-                        além de enviá-las com as fotos da avaliação postural para meu e-mail ou Whatsapp.  
+                    <p class="" id="color_text_{{detalhe.id}}"> 
+                        &nbsp&nbsp&nbsp&nbsp {{detalhe.texto1}}  
                     </p>
-                    <p class="wow fadeInUp""> 
-                        &nbsp&nbsp&nbsp&nbsp Esses dados irão me preparar para a sua consulta e elaboração do seu programa de 
-                        treinamento, me tornando mais assertivo e dinâmico na prescrição do seu treino, 
-                        quanto mais rápido você me enviar tudo que solicitei para elaboração do seu programa
-                        de treinamento, mais rápido terá o seu treino em mão.  
+                    <p class="" id="color_text2_{{detalhe.id}}"> 
+                        &nbsp&nbsp&nbsp&nbsp {{detalhe.texto2}} 
                     </p>
                 </div>
+                <script>
+                    colored("{{detalhe.id}}","{{detalhe.cor_fundo}}", "{{detalhe.cor_texto}}", "{{detalhe.cor_titulo}}")
+                </script>
             </div>
         </div>
     </div>
 </div>
-<div class="details wow fadeInUp">
-    <div class="details-padding" style="background-color: #012a03; width: 100%; height: 100%;">
-    <div class="container details-inicial wow fadeInUp">
-        <h1>DURANTE A CONSULTA</h1>
-        <div class="details-elementor">
-            <div class="details-elementor-div">
-                <span></span>
-            </div>
-        </div>
-        <div class=" details-text" style="flex-direction: row-reverse"  id="column">
-            <div class="details-item  wow fadeInUp">
-                <div class="details-img">
-                    <img class="wow fadeInUp" src="{% static '/img/cerebro.png' %}" alt="">
-                </div>
-            </div>
-            <div class="details-item  wow fadeInUp">
-                <p class="wow fadeInUp"> 
-                    &nbsp&nbsp&nbsp&nbspDurante a nossa consulta eu irei te conhecer melhor. Como você já respondeu a anamnese e me mandou 
-                as fotos para avaliação postural, é hora de desabafar, me contar toda a sua experiência dentro da 
-                academia ou com possíveis personais, contar  seus reais anseios e destrinchar as suas dificuldades 
-                e desejos. 
-                </p>
-                <p class="wow fadeInUp"> 
-                    &nbsp&nbsp&nbsp&nbsp É nesse papo onde eu vou te explicar o que iremos fazer, como você pode usar estratégias para se 
-                benéficiar mais do meu acompanhamento, entender a minha metodologia de treino e qual o caminho certo 
-                para atingir seus resultados. 
-                </p>
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
-<div class="details wow fadeInUp">
-    <div class="details-padding" style="background-color: black; width: 100%; height: 100%;">
-        <div class="container details-inicial wow fadeInUp">
-            <h1>APÓS A CONSULTA:</h1>
-            <div class="details-elementor">
-                <div class="details-elementor-div">
-                    <span></span>
-                </div>
-            </div>
-            <div class=" details-text wow fadeInUp"  id="column">
-                <div class="details-item">
-                    <div class="details-img">
-                        <img class="wow fadeInUp" src="{% static '/img/after.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="details-item">
-                    <p class="wow fadeInUp"> 
-                        &nbsp&nbsp&nbsp&nbspAo término da consulta eu irei sentar e observar todas as suas possíveis alterações, 
-                    prescrever todo o seu planejamento de treino, passar para o aplicativo e te ensinar de 
-                    forma prática como utilizar a sua nova plataforma de treino. 
-                    </p>
-                    <p class="wow fadeInUp""> 
-                        &nbsp&nbsp&nbsp&nbsp Logo na primeira semana de treinamento você deverá gravar a execução de cada exercício 
-                    prescrito para eu avaliar como está sendo a execução do seu movimento e, com o tempo, 
-                    iremos ajustando tudo. Após 20 dias, você deverá me enviar novamente uma nova filmagem 
-                    com as execuções dos mesmo exercícios para eu lhe ajudar com possíveis erros na técnica 
-                    do movimento e ter certeza de que tudo está indo no caminho certo. 
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% endfor %}

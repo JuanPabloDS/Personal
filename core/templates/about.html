@@ -3,13 +3,14 @@
  <div class="about">
     <div class="background-about">
         <div class="container personal-about wow fadeInUp">
-            <h1>O QUE ESTÁ INCLUSO:</h1>
+            <h1>{{sobre.titulo}}</h1>
             <div class="about-elementor">
                 <div class="about-elementor-div">
                     <span></span>
                 </div>
             </div>
             <div class="container about-card">
+                {% for sobre_dado in sobre_dados %}
                 <div class="wow fadeInUp card">
                     <div class="">
                         <div class="contents">
@@ -17,10 +18,8 @@
                                 <div class="back-content">
                                     <div class="about-text">
                                         <li>
-                                            <p><span> Anamnese<i class="fa-solid fa-angle-right"></i></span>
-                                            Pesquisa completa para entender qual é o seu objetivo, rotina diária, 
-                                            restrições, desejos e particularidades. Com todas essas respostas em mãos será montado um treino
-                                            100% individualizado para atender suas demandas e necessidades.
+                                            <p><span> {{sobre_dado.titulo}}<i class="fa-solid fa-angle-right"></i></span>
+                                                {{sobre_dado.textos}}
                                             </p>
                                         </li>
                                     </div>
@@ -29,103 +28,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="wow fadeInUp card">
-                    <div class="">
-                        <div class="contents">
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="about-text">
-                                        <li>
-                                            <p><span> Aplicativo e acesso aos Treinos Diários<i class="fa-solid fa-angle-right"></i></span>
-                                                Esqueça toda aquela ficha/PDF de treinos chatos 
-                                                e monónotonos que os personais da sua região entregam como serviço. Aqui, na minha consultoria, você 
-                                                terá acesso aos seus treinos através de um aplicativo exclusivo e totalmente didático, onde você poderá 
-                                                ver seus treinos, vídeos explicativos, observações importantes de cada exercício, além de poder anotar
-                                                todas as suas cargas de treinos para termos noção das progressões diariamente.
-                                            </p>
-                                        </li>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wow fadeInUp card">
-                    <div class="">
-                        <div class="contents">
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="about-text">
-                                        <li>
-                                            <p><span> Exercícios demonstrados em vídeos<i class="fa-solid fa-angle-right"></i></span>
-                                                Saber a execução correta dos exercícios é de extrema 
-                                                importância dentro do nosso processo e te fará chegar mais rápido ao seu objetivo, além de prevenir 
-                                                dores, lesões e possíveis acidentes durante o treinamento. Portanto, você receberá vídeos demonstrativos 
-                                                de cada exercício para treinar com segurança e eficiência.
-                                            </p>
-                                        </li>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wow fadeInUp card">
-                    <div class="">
-                        <div class="contents">
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="about-text">
-                                        <li>
-                                            <p><span> Correções<i class="fa-solid fa-angle-right"></i></span>
-                                                Para eu ter certeza de que está fazendo tudo certo, 
-                                                você irá me enviar todas as execuções de movimentos de 20 em 20 dias pelo Whatsapp, para que eu 
-                                                possa observar seus movimentos e entrar com possíveis correções.
-                                            </p>
-                                        </li>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wow fadeInUp card">
-                    <div class="">
-                        <div class="contents">
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="about-text">
-                                        <li>
-                                            <p><span> Suporte 24 horas no Whatsapp<i class="fa-solid fa-angle-right"></i></span>
-                                                Sempre que precisar, pode me enviar uma mensagem que 
-                                                irei te ajudar assim que possível.
-                                            </p>
-                                        </li>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wow fadeInUp card">
-                    <div class="">
-                        <div class="contents">
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="about-text">
-                                        <li>
-                                            <p><span> Brindes Exclusivos<i class="fa-solid fa-angle-right"></i></span>
-                                                Ao fechar qualquer plano de consultoria comigo, voce irá receber 
-                                                um E-Book de alongamento gratuitamente, para executar a qualquer hora do seu dia, e uma ficha de 
-                                                presença via bloco de notas para você anotar as suas presenças.
-                                            </p>
-                                        </li>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

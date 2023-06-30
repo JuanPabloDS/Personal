@@ -74,11 +74,6 @@ var elemento1 = document.getElementById('nav');
 var largura = elemento1.offsetWidth;
 var altura = elemento1.offsetHeight;
 
-// Aplica as dimensões ao elemento 2
-var elemento2 = document.getElementById('fixed');
-elemento2.style.width = largura + 'px';
-elemento2.style.height = altura + 'px';
-
 
 // Questions
 
@@ -108,18 +103,6 @@ function captElement(elemento) {
 
 }
 
-// Fechar o menu ao clicar fora dele
-
-$(document).on("click", function(event) {
-  var target = $(event.target);
-  var containers = $(".grid-container");
-
-  // Verificar se o clique ocorreu fora das divs
-  if (!target.closest(".item").length) {
-    // Fechar todas as divs suavemente com slideUp() ou fadeOut()
-    containers.find(".item").fadeOut();
-  }
-});
 
 function toggleDiv(clickedDiv) {
   var clickedContainer = $(clickedDiv).closest(".grid-container");
@@ -131,3 +114,5 @@ function toggleDiv(clickedDiv) {
   // Abrir ou fechar a div clicada
   $(clickedDiv).next(".item").slideToggle(400);
 }
+
+

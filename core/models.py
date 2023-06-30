@@ -20,7 +20,7 @@ def get_file_path(_instance, filename):
 class Apresentacao(Base):
     titulo = models.CharField(max_length=100)
     icon = StdImageField('icon',upload_to=get_file_path, help_text='Icone da página')
-    iamgem_fundo = StdImageField('fundo',upload_to=get_file_path, help_text='Imagem de fundo da tela inicial')
+    imagem_back = StdImageField('fundo',upload_to=get_file_path, help_text='Imagem de fundo da tela inicial')
     instagram = models.CharField(max_length=100, help_text='Usuario do seu instagram')
     instagram_link = models.CharField(max_length=100, help_text='Link do seu instagram')
     descricao = models.CharField(max_length=100)
@@ -70,7 +70,7 @@ class Detalhes(Base):
     )
 
     titulo = models.CharField(max_length=100)
-    iamgem = StdImageField('detalhes',upload_to=get_file_path)
+    img = StdImageField('detalhes',upload_to=get_file_path)
     texto1 = models.TextField()
     texto2 = models.TextField()
     cor_titulo = models.CharField(max_length=7, validators=[cor_validator], default='')
@@ -105,6 +105,7 @@ class PrecosPlano1(Base):
     titulo = models.CharField(max_length=100)
     dias = models.CharField(max_length=100)
     preco = models.DecimalField(max_digits=8, decimal_places=2)
+    img = StdImageField('imagem',upload_to=get_file_path, default='')
 
     class Meta:
         verbose_name = 'Preço Plano 1'
@@ -116,30 +117,43 @@ class PrecosPlano1(Base):
         return f'{self.titulo}'
 
 class PrecosPlano1Dados(Base):
-    destaque = models.CharField(max_length=100)
-    texto = models.CharField(max_length=100)
+    destaque = models.TextField(blank=True)
+    texto = models.TextField()
 
     class Meta:
-        verbose_name = 'Detalhes Preço plano 1'
-        verbose_name_plural = 'Detalhes Preço plano 1'
+        verbose_name = 'Preço plano 1 texto'
+        verbose_name_plural = 'Preço plano 1 texto'
+
+    def __str__(self) -> str:
+        """Retorna o str"""
+        return f'item'
 
 
 class PrecosPlano2(Base):
     titulo = models.CharField(max_length=100)
     dias = models.CharField(max_length=100)
     preco = models.DecimalField(max_digits=8, decimal_places=2)
+    img = StdImageField('imagem',upload_to=get_file_path, default='')
 
     class Meta:
         verbose_name = 'Preço plano 2'
         verbose_name_plural = 'Preço plano 2'
 
+    def __str__(self) -> str:
+        """Retorna o str"""
+        return f'{self.titulo}'
+
 class PrecosPlano2Dados(Base):
-    destaque = models.CharField(max_length=100)
-    texto = models.CharField(max_length=100)
+    destaque = models.TextField(blank=True)
+    texto = models.TextField()
 
     class Meta:
-        verbose_name = 'Detalhes Preço plano 2'
-        verbose_name_plural = 'Detalhes Preço plano 2'
+        verbose_name = 'Preço plano 2 texto'
+        verbose_name_plural = 'Preço plano 2 texto'
+
+    def __str__(self) -> str:
+        """Retorna o str"""
+        return f'item'
 
 
 class Imagem(Base):
@@ -155,7 +169,7 @@ class Imagem(Base):
         return f'{self.titulo}'
 
 class ImagensLista(Base):
-    iamgem = StdImageField('imagem',upload_to=get_file_path)
+    img = StdImageField('imagem',upload_to=get_file_path)
 
     class Meta:
         verbose_name = 'Imagem'
@@ -176,7 +190,7 @@ class Duvidas(Base):
 
 class DuvidasRespostas(Base):
     titulo = models.CharField(max_length=100)
-    resposta = models.CharField(max_length=100)
+    resposta = models.TextField()
 
     class Meta:
         verbose_name = 'Duvida e resposta'

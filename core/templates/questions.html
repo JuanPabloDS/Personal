@@ -3,7 +3,7 @@
 <div class="question wow fadeInUp">
     <div class="question-plan container wow fadeInUp">
         <div class=" wow fadeInUp">
-            <h1>DÚVIDAS FREQUENTES</h1>
+            <h1>{{duvidas.titulo}}</h1>
             <div class="price-elementor">
                 <div class="price-elementor-div">
                     <span></span>
@@ -11,66 +11,17 @@
             </div>
         </div>
         <div class="question-aligh" >
+            {% for duvida in duvidas_respostas %}
             <div class="question-duv wow fadeInUp grid-container">
                 <div class="question-box" onclick="toggleDiv(this)">
-                    <span>O treino será trocado quando?</span>
+                    <span>{{duvida.titulo}}</span>
                     <i class="fa-solid fa-caret-down wow fadeInUp" id="i-a"></i>
                 </div>
                 <div class="question-aws item" id="duvi-b">
-                    <p class="">Depende, se você contratou o plano de 6 semanas de treino
-                         e o seu processo de evolução for rápido fazemos alterações necessárias,
-                          caso contrario, só na renovação. Agora se você contratou o plano de 3 
-                          meses, essa troca ela acontece a cada 30 dias!</p>
+                    <p class="">{{duvida.resposta}}</p>
                 </div>
             </div>
-            <div class="question-duv wow fadeInUp grid-container" >
-                <div class="question-box " id="duvi-a" onclick="toggleDiv(this)">
-                    <span>Posso te mandar mensagem no Whatsapp?</span>
-                    <i class="fa-solid fa-caret-down" id="i-c"></i>
-                </div>
-                <div class="question-aws item" id="duvi-b">
-                    <p class="">Sim, você deve! Preciso que você tire todas as duvidas pra eu ter 
-                        certeza que você está indo pelo caminho certo, quando enviar mensagem assim 
-                        que possível, responderei.</p>
-                </div>
-            </div>
-            <div class="question-duv wow fadeInUp grid-container">
-                <div class="question-box duvborder duv-color" id="duvi-a" onclick="toggleDiv(this)"> 
-                    <span>
-                        O que acontece se eu não enviar os vídeos dentro do prazo?  </span>
-                    <i class="fa-solid fa-caret-down" id="i-e"></i>
-                </div>
-                <div class="question-aws duvborder he item" id="duvi-b">
-                    <p class="">Infelizmente se você perder o prazo para a gravação dos vídeos, 
-                        não terá uma segunda chance! Portanto, a gravação dos exercícios é de 
-                        extrema importância porque ela pode afetar diretamente no seu resultado! 
-                        Você só vai conseguir uma nova chance apenas em caso de renovação do plano 
-                        ou no próximo protocolo! </p>
-                </div>
-            </div>
-            <div class="question-duv wow fadeInUp grid-container">
-                <div class="question-box duvborder duv-color" id="duvi-a" onclick="toggleDiv(this)">
-                    <span>
-                        O treino ficara disponível no app até quando? </span>
-                    <i class="fa-solid fa-caret-down" id="i-g"></i>
-                </div>
-                <div class="question-aws duvborder he item" id="duvi-b">
-                    <p class="">Até o vencimento do seu plano!</p>
-                </div>
-            </div>
-            <div class="question-duv wow fadeInUp grid-container">
-                <div class="question-box duvborder duv-color" id="duvi-a" onclick="toggleDiv(this)">
-                    <span>
-                        Preciso enviar as fotos antes da consulta?</span>
-                    <i class="fa-solid fa-caret-down " id="i-i"></i>
-                </div>
-                <div class="question-aws duvborder he item" id="duvi-b">
-                    <p class="">Com toda certeza, é a única forma de eu prescrever um treino 
-                        individualizado para você, avaliando seu grau de flexibilidade, o seu 
-                        corpo como um todo, seus desequilíbrios musculares e desvios posturais. 
-                        A consulta não será feita sem as fotos e nem sem a anamnese.</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

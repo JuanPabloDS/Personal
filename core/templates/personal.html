@@ -1,11 +1,11 @@
 {% load static %}
 <!-- Personal presentation -->
-<div class="personal-img">
+<div class="personal-img" style="background-image: url('/media/{{projetos.imagem_back}}')">
     <div class="personal-start  wow fadeInUp">
         <div class="container personal-presentation wow fadeInUp">
-            <h1>CONSULTA INDIVIDUAL</h1>
-            <a href="https://instagram.com/erick_lopes99?igshid=YmMyMTA2M2Y=">@erick_lopes99</a>
-            <p>Leia ATENTAMENTE todas as informações abaixo para fazer parte do time.</p>
+            <h1>{{projetos.titulo}}</h1>
+            <a href="{{projetos.instagram_link}}">{{projetos.instagram}}</a>
+            <p>{{projetos.descricao}}</p>
         </div>
     </div>
 </div>
