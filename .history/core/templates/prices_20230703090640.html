@@ -1,0 +1,65 @@
+{% load static %}
+<!-- Prices -->
+<div class="price wow fadeInUp">
+    <div class="container wow fadeInUp">
+        <div class="price-plan wow fadeInUp">
+            <h1>{{precos.titulo}}</h1>
+            <div class="price-elementor">
+                <div class="price-elementor-div">
+                    <span></span>
+                </div>
+            </div>
+            <div class="price-grid" >
+                <div class="price-div">
+                    <div>
+                        <p class="">
+                            {{precos_plano1.titulo}} <i class="fa-solid fa-angle-right"></i> {{precos_plano1.dias}}
+                        </p>
+                        <p id="price-value">
+                            R$ {{precos_plano1.preco}}
+                        </p>
+                    <img src="{% static 'img/trofeu.png' %}" alt="">
+                        
+                    </div>
+                    <div class="wow fadeInUp price-p">
+                        {% for preco in precos_plano1_dados %}
+                        <div class="table wow fadeInUp">
+                            <p>
+                                <span>{{preco.destaque}}</span>
+                                {{preco.texto}}
+                            </p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                </div>
+                <div class="price-margin"></div>
+                <div class="price-div">
+                    <div>
+                        <p class="">
+                            {{precos_plano2.dias}} <i class="fa-solid fa-angle-right"></i> {{precos_plano2.dias}}
+                        </p>
+                        <p id="price-value">
+                            R$ {{precos_plano2.preco}}
+                        </p>
+                    <img src="{% static 'img/trofeu.png' %}" alt="">
+                        
+                    </div>
+                    <div class="wow fadeInUp price-p">
+                        {% for preco in precos_plano2_dados %}
+                        <div class="price-table wow fadeInUp">
+                            <p>
+                                <span>{{preco.destaque}}</span>
+                                {{preco.texto}}
+                            </p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="price-pg wow fadeInUp">
+                <p >{{precos.aviso}}</p>
+            </div>
+        </div>
+    </div>
+</div>

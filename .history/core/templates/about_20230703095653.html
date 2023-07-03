@@ -1,0 +1,35 @@
+{% load static %}
+ <!-- About -->
+ <div class="about">
+    <div class="background-about" id="{{sobre.titulo}}">
+        <div class="container personal-about wow fadeInUp">
+            <h1>{{sobre.titulo}}</h1>
+            <div class="about-elementor">
+                <div class="about-elementor-div">
+                    <span></span>
+                </div>
+            </div>
+            <div class="container about-card">
+                {% for sobre_dado in sobre_dados %}
+                <div class="wow fadeInUp card">
+                    <div class="">
+                        <div class="contents">
+                            <div class="back">
+                                <div class="back-content">
+                                    <div class="about-text">
+                                        <li>
+                                            <p><span> {{sobre_dado.titulo}}<i class="fa-solid fa-angle-right"></i></span>
+                                                {{sobre_dado.textos}}
+                                            </p>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

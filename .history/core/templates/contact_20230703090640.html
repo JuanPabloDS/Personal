@@ -1,0 +1,36 @@
+{% load static %}
+<!-- Contact -->
+<div class="contact wow fadeInUp">
+    <div class="container contact-div wow fadeInUp">
+        <div class=" wow fadeInUp">
+            <h1>{{contato.titulo}}</h1>
+            <div class="price-elementor">
+                <div class="price-elementor-div">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="contact-p">
+            <p class="atention container">{{contato.destaque}}</p>
+        </div>
+        <div class="container online wow fadeInUp">
+                <span class="elementor-button-content-wrapper">
+                    <span class="elementor-button-icon elementor-align-icon-left">
+                    <div class="wow fadeInUp contact-card">
+                        <a href="{{contato.link}}" target="_blank" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+                        <div class="">
+                            <div class="contact-contents">
+                                <div class="contact-back">
+                                    <div class="contact-back-content">
+                                        <i aria-hidden="true" class="fab fa-whatsapp"></i></span>
+                                        <p><span class="elementor-button-text">{{contato.botao}}</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+            </span>
+        </div>
+    </div>
+</div>

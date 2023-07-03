@@ -1,0 +1,27 @@
+{% load static %}
+<!-- Questions -->
+<div class="question wow fadeInUp" id="{{duvidas.titulo}}">
+    <div class="question-plan container wow fadeInUp">
+        <div class=" wow fadeInUp">
+            <h1>{{duvidas.titulo}}</h1>
+            <div class="price-elementor">
+                <div class="price-elementor-div">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="question-aligh" >
+            {% for duvida in duvidas_respostas %}
+            <div class="question-duv wow fadeInUp grid-container">
+                <div class="question-box" onclick="toggleDiv(this)">
+                    <span>{{duvida.titulo}}</span>
+                    <i class="fa-solid fa-caret-down fa-caret-up wow fadeInUp" id="i-a"></i>
+                </div>
+                <div class="question-aws item" id="duvi-b">
+                    <p class="">{{duvida.resposta}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
