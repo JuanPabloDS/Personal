@@ -120,8 +120,10 @@ function toggleDiv(clickedDiv) {
   icon.toggleClass("fa-caret-down fa-caret-up");
   console.log(icon.classList.contains(""))
 
-  console.log(icon.classList.contains(""))
-
-  
+  if (icon.classList.contains("fa-caret-up")) {
+    // A classe "minhaClasse" está presente no elemento
+    icon.removeClass("fa-caret-up");
+    icon.addClass("fa-caret-down");
+  }
 }
 

@@ -107,21 +107,14 @@ function captElement(elemento) {
 function toggleDiv(clickedDiv) {
   var clickedContainer = $(clickedDiv).closest(".grid-container");
   var icon = clickedContainer.find("i");
-  var allContainers = $(".grid-container");
-  var otherIcons = allContainers.find("i");
-  // Fechar todas as outras divs
-  allContainers.not(clickedContainer).find(".item").fadeOut();
-  otherIcons.removeClass("fa-caret-up").addClass("fa-caret-down");
+  var isActive = clickedContainer.hasClass("active");
 
+  $(".question-duv").removeClass("active");
+  $(".question-duv i").removeClass("fa-caret-up").addClass("fa-caret-down");
 
-
-  // Abrir ou fechar a div clicada
-  $(clickedDiv).next(".item").slideToggle(400);
-  icon.toggleClass("fa-caret-down fa-caret-up");
-  console.log(icon.classList.contains(""))
-
-  console.log(icon.classList.contains(""))
-
-  
+  if (!isActive) {
+    clickedContainer.addClass("active");
+    icon.removeClass("fa-caret-down").addClass("fa-caret-up");
+  }
 }
 

@@ -109,6 +109,9 @@ function toggleDiv(clickedDiv) {
   var icon = clickedContainer.find("i");
   var allContainers = $(".grid-container");
   var otherIcons = allContainers.find("i");
+  console.log(icon)
+  icon.toggleClass("fa-caret-down fa-caret-up");
+
   // Fechar todas as outras divs
   allContainers.not(clickedContainer).find(".item").fadeOut();
   otherIcons.removeClass("fa-caret-up").addClass("fa-caret-down");
@@ -117,11 +120,5 @@ function toggleDiv(clickedDiv) {
 
   // Abrir ou fechar a div clicada
   $(clickedDiv).next(".item").slideToggle(400);
-  icon.toggleClass("fa-caret-down fa-caret-up");
-  console.log(icon.classList.contains(""))
-
-  console.log(icon.classList.contains(""))
-
-  
 }
 
