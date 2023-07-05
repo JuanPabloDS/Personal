@@ -104,11 +104,12 @@ function captElement(elemento) {
 }
 
 
-function toggleDiv(clickedDiv) {
+function toggleDiv(clickedDiv, i_id) {
   var clickedContainer = $(clickedDiv).closest(".grid-container");
   const icon = clickedContainer.find("i");
   var allContainers = $(".grid-container");
   var otherIcons = allContainers.not(clickedContainer).find("i");
+  var icon_id = document.getElementById(i_id);
 
   // Fechar todas as outras divs
   allContainers.not(clickedContainer).find(".item").fadeOut();

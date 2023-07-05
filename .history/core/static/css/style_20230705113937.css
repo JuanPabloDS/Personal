@@ -923,9 +923,6 @@ to {
       .question-aws p {
         font-size: 0.91em;
       }
-      .question{
-        min-height: 900px;
-    }
       
 }
 @media screen and (max-width: 650px){

@@ -104,12 +104,13 @@ function captElement(elemento) {
 }
 
 
-function toggleDiv(clickedDiv) {
+function toggleDiv(clickedDiv, i_id) {
   var clickedContainer = $(clickedDiv).closest(".grid-container");
   const icon = clickedContainer.find("i");
   var allContainers = $(".grid-container");
-  var otherIcons = allContainers.not(clickedContainer).find("i");
-
+  var otherIcons = allContainers.find("i");
+  var icon_id = document.getElementById(i_id);
+  console.log(icon_id)
   // Fechar todas as outras divs
   allContainers.not(clickedContainer).find(".item").fadeOut();
 
@@ -121,9 +122,14 @@ function toggleDiv(clickedDiv) {
 
   // Abrir ou fechar a div clicada
   $(clickedDiv).next(".item").slideToggle(400);
-
-  // Alternar classe do ícone clicado
-  $(icon).toggleClass("fa-caret-up fa-caret-down");
+  console.log(icon_id)
+  if (icon_id.classList.contains("fa-caret-up")) {
+    console.log('True')
+    $(icon_id).removeClass("fa-caret-up").addClass("fa-caret-down");
+  } else {
+    console.log('False')
+    $(icon_id).removeClass("fa-caret-down").addClass("fa-caret-up");
+  }
 
 }
 

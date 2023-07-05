@@ -106,25 +106,21 @@ function captElement(elemento) {
 
 function toggleDiv(clickedDiv) {
   var clickedContainer = $(clickedDiv).closest(".grid-container");
-  const icon = clickedContainer.find("i");
+  var icon = clickedContainer.find("i");
   var allContainers = $(".grid-container");
-  var otherIcons = allContainers.not(clickedContainer).find("i");
-
+  var otherIcons = allContainers.find("i");
   // Fechar todas as outras divs
   allContainers.not(clickedContainer).find(".item").fadeOut();
+  otherIcons.removeClass("fa-caret-up").addClass("fa-caret-down");
 
-  // Remover classe "fa-caret-up" de outros ícones
-  otherIcons.removeClass("fa-caret-up");
 
-  // Adicionar classe "fa-caret-down" aos outros ícones
-  otherIcons.addClass("fa-caret-down");
 
   // Abrir ou fechar a div clicada
   $(clickedDiv).next(".item").slideToggle(400);
+  icon.toggleClass("fa-caret-down fa-caret-up");
+  console.log(icon.classList.contains(""))
 
-  // Alternar classe do ícone clicado
-  $(icon).toggleClass("fa-caret-up fa-caret-down");
+  console.log(icon.classList.contains(""))
 
 }
-
 

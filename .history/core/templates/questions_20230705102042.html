@@ -13,9 +13,9 @@
         <div class="question-aligh" >
             {% for duvida in duvidas_respostas %}
             <div class="question-duv wow fadeInUp grid-container">
-                <div class="question-box" onclick="toggleDiv(this)">
+                <div class="question-box" onclick="toggleDiv(this, 'i-{{duvida.id}}')">
                     <span>{{duvida.titulo}}</span>
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i class="fa-solid fa-caret-down " id="i-{{duvida.id}}" onclick="toggleIcon(this)"></i>
                 </div>
                 <div class="question-aws item" id="duvi-b">
                     <p class="">{{duvida.resposta}}</p>

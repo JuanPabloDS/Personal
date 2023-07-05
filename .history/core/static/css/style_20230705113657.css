@@ -834,7 +834,7 @@ to {
     padding-bottom: 6em;
     font-family: 'russo', sans-serif;
     background-color: var(--cor--question-background);
-    min-height: 910px;
+    min-height: 983px;
 }
 .question-plan{
     display: flex;
@@ -923,9 +923,6 @@ to {
       .question-aws p {
         font-size: 0.91em;
       }
-      .question{
-        min-height: 900px;
-    }
       
 }
 @media screen and (max-width: 650px){
@@ -943,12 +940,8 @@ to {
     .question-duv {
         width: 22em;
       }
-      .question{
-        min-height: 850px;
-    }
 }
 @media screen and (max-width: 400px){
-    
     .question-duv {
         width: 19em;
       }

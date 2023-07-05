@@ -104,26 +104,28 @@ function captElement(elemento) {
 }
 
 
-function toggleDiv(clickedDiv) {
+function toggleDiv(clickedDiv, i_id) {
   var clickedContainer = $(clickedDiv).closest(".grid-container");
   const icon = clickedContainer.find("i");
   var allContainers = $(".grid-container");
-  var otherIcons = allContainers.not(clickedContainer).find("i");
-
+  var otherIcons = allContainers.find("i");
+  var icon_id = document.getElementById(i_id);
+  console.log(icon_id)
   // Fechar todas as outras divs
   allContainers.not(clickedContainer).find(".item").fadeOut();
+  otherIcons.removeClass("fa-caret-up").addClass("fa-caret-down");
 
-  // Remover classe "fa-caret-up" de outros ícones
-  otherIcons.removeClass("fa-caret-up");
 
-  // Adicionar classe "fa-caret-down" aos outros ícones
-  otherIcons.addClass("fa-caret-down");
 
   // Abrir ou fechar a div clicada
   $(clickedDiv).next(".item").slideToggle(400);
 
-  // Alternar classe do ícone clicado
-  $(icon).toggleClass("fa-caret-up fa-caret-down");
+
+  if (icon_id.classList.contains("fa-caret-up")) {
+    $(icon_id).removeClass("fa-caret-up").addClass("fa-caret-up");
+  } else {
+    $(icon_id).removeClass("fa-caret-up").addClass("fa-caret-down");
+  }
 
 }
 
